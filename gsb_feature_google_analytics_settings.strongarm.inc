@@ -28,26 +28,14 @@ function gsb_feature_google_analytics_settings_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'googleanalytics_codesnippet_after';
-  $strongarm->value = '}';
+  $strongarm->value = '';
   $export['googleanalytics_codesnippet_after'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'googleanalytics_codesnippet_before';
-  $strongarm->value = 'if (window.location.href.indexOf("search") !=  -1) 
-{
-   var str = window.location.href;
-   var pos = str.indexOf("search") + 8;
-   var len = str.length;
-   if (pos < len) 
-   {
-      var gsaterm = str.substring(pos, len);
-      _gaq.push([\'_trackPageview\', \'/search?term=\' + gsaterm]);
-   }	
-}
-else
-{';
+  $strongarm->value = '';
   $export['googleanalytics_codesnippet_before'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -63,6 +51,46 @@ else
   $strongarm->name = 'googleanalytics_custom';
   $strongarm->value = '0';
   $export['googleanalytics_custom'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'googleanalytics_custom_var';
+  $strongarm->value = array(
+    'slots' => array(
+      1 => array(
+        'slot' => 1,
+        'name' => '',
+        'value' => '',
+        'scope' => '3',
+      ),
+      2 => array(
+        'slot' => 2,
+        'name' => '',
+        'value' => '',
+        'scope' => '3',
+      ),
+      3 => array(
+        'slot' => 3,
+        'name' => '',
+        'value' => '',
+        'scope' => '3',
+      ),
+      4 => array(
+        'slot' => 4,
+        'name' => '',
+        'value' => '',
+        'scope' => '3',
+      ),
+      5 => array(
+        'slot' => 5,
+        'name' => '',
+        'value' => '',
+        'scope' => '3',
+      ),
+    ),
+  );
+  $export['googleanalytics_custom_var'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -104,13 +132,36 @@ user/*/*';
   $strongarm->value = array(
     1 => 0,
     2 => 0,
-    3 => 0,
-    4 => 0,
-    5 => 0,
-    7 => 0,
-    6 => 0,
-    8 => 0,
-    9 => 0,
+    11 => 0,
+    151 => 0,
+    16 => 0,
+    21 => 0,
+    71 => 0,
+    61 => 0,
+    56 => 0,
+    66 => 0,
+    31 => 0,
+    36 => 0,
+    41 => 0,
+    91 => 0,
+    146 => 0,
+    136 => 0,
+    26 => 0,
+    46 => 0,
+    51 => 0,
+    81 => 0,
+    86 => 0,
+    96 => 0,
+    101 => 0,
+    106 => 0,
+    116 => 0,
+    121 => 0,
+    126 => 0,
+    131 => 0,
+    141 => 0,
+    156 => 0,
+    161 => 0,
+    166 => 0,
   );
   $export['googleanalytics_roles'] = $strongarm;
 
@@ -120,6 +171,20 @@ user/*/*';
   $strongarm->name = 'googleanalytics_site_search';
   $strongarm->value = 0;
   $export['googleanalytics_site_search'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'googleanalytics_trackadsense';
+  $strongarm->value = 0;
+  $export['googleanalytics_trackadsense'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'googleanalytics_trackdoubleclick';
+  $strongarm->value = 0;
+  $export['googleanalytics_trackdoubleclick'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
