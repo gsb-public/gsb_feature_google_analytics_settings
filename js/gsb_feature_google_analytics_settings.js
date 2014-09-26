@@ -24,38 +24,51 @@
 
         // config event clicks
 
-        // Top Stories
-        $(".content .node-idea-story .group-right .top-stories-wrapper a").click(function() {
-          alert('click top story');
-        });        
+        /***************************************************************
+         * Idea Story
+         ***************************************************************/
 
-        // Explore More
-        $(".content .node-idea-story .group-left .explore-more-content .field-name-title a").click(function() {
-          alert('click explore more');
-        });        
+        // Top Stories
+        $(".node-type-idea-story .top-stories-wrapper a").click(function() {
+          console.log('click top story');
+        });
+
+        // Explore More Title
+        $(".node-type-idea-story .explore-more-wrapper .field-name-title a").click(function() {
+          console.log('click explore more');
+        });
+
+        // Explore More Taxomony
+        $(".node-type-idea-story .explore-more-wrapper .field-name-field-key-taxonomy a").click(function() {
+          console.log('click explore more');
+        });
 
         // Related Content
-        $(".content .node-idea-story .group-right .field-name-field-related-faculty a").click(function() {
-          alert('click related content faculty');
-        });        
+        $(".node-type-idea-story .field-name-field-related-faculty a").click(function() {
+          console.log('click related content faculty');
+        });
 
-        $(".content .node-idea-story .group-right .field-name-field-related-idea-story a").click(function() {
-          alert('click related content idea story');
-        });        
+        $(".node-type-idea-story .field-name-field-related-idea-story a").click(function() {
+          console.log('click related content idea story');
+        });
 
-        $(".content .node-idea-story .group-right .field-collection-item-field-related-other-unlimited a").click(function() {
-          alert('click related content other');
-        });        
+        $(".node-type-idea-story .field-collection-item-field-related-other-unlimited a").click(function() {
+          console.log('click related content other');
+        });
+
+        $(".node-type-idea-story .field-name-field-link-unlimited a").click(function() {
+          console.log('click related content other');
+        });
 
         // Top Key Taxonomy Terms
-        $(".content .node-idea-story .group-left .group_wrapper_header .field-name-field-key-taxonomy a").click(function() {
-          alert('click top key taxonomy');
-        });        
+        $(".node-type-idea-story  .group_wrapper_header .field-name-field-key-taxonomy a").click(function() {
+          console.log('click top key taxonomy');
+        });
 
         // Bottom Taxonomy
-        $(".content .node-idea-story .group-left .group_wrapper_taxonomy a").click(function() {
-          alert('click bottom key taxonomy');
-        });        
+        $(".node-type-idea-story .group_wrapper_taxonomy a").click(function() {
+          console.log('click bottom key taxonomy');
+        });
 
       }); // end document.ready 
     } // end attach
