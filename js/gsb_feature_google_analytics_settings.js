@@ -30,7 +30,7 @@
 
         // Top Stories
         $(".node-type-idea-story .top-stories-wrapper a").click(function() {
-          _gaq.push(['_trackEvent', 'Idea Story - Editors Pick', 'Click']);
+          _gaq.push(['_trackEvent', 'Idea Story - Editor\'s Picks', 'Click']);
         });
 
         // Explore More Title
