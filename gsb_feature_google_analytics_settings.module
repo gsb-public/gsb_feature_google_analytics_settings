@@ -5,3 +5,47 @@
  */
 
 include_once 'gsb_feature_google_analytics_settings.features.inc';
+
+/**
+ * Implement hook_libraries_info().
+ */
+function gsb_feature_google_analytics_settings_libraries_info() {
+  $libraries['jquery-scrolldepth'] = array(
+    'name' => 'jquery-scrolldepth',
+    'vendor url' => 'https://github.com/robflaherty/jquery-scrolldepth',
+    'download url' => 'https://github.com/robflaherty/jquery-scrolldepth',
+    'version' => 'release-1.0',
+    'files' => array(
+      'js' => array(
+        'jquery.scrolldepth.js',
+      ),
+    ),
+  );
+  $libraries['riveted'] = array(
+    'name' => 'riveted',
+    'vendor url' => 'https://github.com/robflaherty/riveted',
+    'download url' => 'https://github.com/robflaherty/riveted',
+    'version' => 'release-1.0',
+    'files' => array(
+      'js' => array(
+        'riveted.js',
+      ),
+    ),
+  );
+  return $libraries;
+}
+
+/**
+ * Implements hook_page_build().
+ */
+function gsb_feature_google_analytics_settings_page_build(&$page) {
+  libraries_load('jquery-scrolldepth');
+  libraries_load('riveted');
+}
+
+/**
+ * Implements hook_page_alter().
+ */
+function gsb_feature_google_analytics_settings_page_alter(&$page) {
+  drupal_add_js(drupal_get_path('module', 'gsb_feature_google_analytics_settings') . '/js/gsb_feature_google_analytics_settings.js');
+}
