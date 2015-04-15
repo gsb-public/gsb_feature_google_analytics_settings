@@ -5,15 +5,16 @@
       $(document).ready(function() {
         
         // config scroll depth 
-
         if ($.scrollDepth) {
           $.scrollDepth({
             minHeight: 2000,
+            eventHandler: function(data) {
+              dataLayer.push(data);
+            }
           });
         }
-
+        
         // config riveted (time tracking)
-
         if (riveted) {
           riveted.init({
             reportInterval: 10,  // Default: 5
@@ -22,11 +23,7 @@
           });
         }                
 
-        // config event clicks
-
-        /***************************************************************
-         * Idea Story
-         ***************************************************************/
+        // config event clicks for Idea Story
 
         // Top Stories
         $(".node-type-idea-story .top-stories-wrapper a").click(function() {
