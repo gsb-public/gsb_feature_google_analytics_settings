@@ -9,7 +9,9 @@
           $.scrollDepth({
             minHeight: 2000,
             eventHandler: function(data) {
-              dataLayer.push(data);
+              if (typeof dataLayer !== "undefined") {
+                dataLayer.push(data);
+              }
             }
           });
         }
